@@ -1,0 +1,42 @@
+#articleDiv{
+    color: rgb(18, 123, 150);
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    border: solid 1px rgb(199, 198, 198);
+    padding: 10px;
+}
+
+#articleDiv header{
+    flex: 1;
+   
+}
+
+
+
+
+.snippet:empty{
+    display: none;
+}
+
+.articleDiv button{
+  width: 100px;
+  margin: auto;
+  background-color: salmon;
+}
+
+.title:hover{
+    color: blue;
+}
+.title:visited{
+    color: purple;
+}
+.title:active{
+    color: red;
+}
+
+
+

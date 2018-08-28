@@ -1,0 +1,17 @@
+#navbar {
+    width: 100vw;
+    height: 14vh;
+    background-color: #5380b599;
+    align-items: center;
+    border-bottom: solid 2px grey;
+    font-size: 30px;
+}
+/* 
+#navbar img {
+    height: 8vh;
+    margin: auto;
+    display: block;
+    margin-top: 3vh;
+} */
+
+
