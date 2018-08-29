@@ -4,8 +4,6 @@ import {
     FETCH_ARTICLES } 
     from './types'
 
-const $ = require('jquery')
-
 // every action creator we need to export
 export const fetchPosts = postsData => dispatch => {
     console.log('fetching');
@@ -40,22 +38,20 @@ export const createPost = postData => dispatch => {
         )
     }
 
-export const fetchArticles = articles => dispatch => {
-    let searchTerm = $('.searchInput').val();
-    console.log(searchTerm)
-    console.log('fetch google city news action called')
-    //http://news.google.com/news?q=apple&output=rss
-    let url = ('http://news.google.com/news?' + 'q=' + searchTerm + '&output=rss');
-    //https://api.cognitive.microsoft.com/bing/v7.0/news/search?q=microsoft&count=10&offset=0&mkt=en-us&safeSearch=Moderate
-    let url2 = ('https://api.cognitive.microsoft.com/bing/v7.0/news/search?q=microsoft&count=10&offset=0&mkt=en-us&safeSearch=Moderate')
-    console.log(url2)
-    fetch(url2)
+export const fetchArticles = (articles) => dispatch => {
+    let searchTerm = document.getElementById("searchInput").value;
+    fetch('https://api.cognitive.microsoft.com/bing/v7.0/news/search?q=' + searchTerm + '&mkt=en-us', {
+    headers: {
+            'Ocp-Apim-Subscription-Key': '209ab4ee91e64dfb99527eb5ef13f2c9',
+            'Host': 'api.cognitive.microsoft.com'
+    },
+})
+
     .then(res => res.json())
-    .then(articles => console.log(articles))
-    // .then(articles => dispatch({
-    //     type: FETCH_ARTICLES,
-    //     payload: articles
-    // }))
+    .then(articles => dispatch({
+        type: FETCH_ARTICLES,
+        payload: articles.value
+    }))
 }
 
 // to add a new action: - add it here

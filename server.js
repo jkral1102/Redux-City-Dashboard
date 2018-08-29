@@ -13,22 +13,37 @@ app.use(express.static("client/build"));
 // Add routes, both API and view
 app.use(routes);
 
-// Connect to the Mongo DB
-//mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/notes");
 
+// MongoDB
 var MongoClient = require('mongodb').MongoClient
   , assert = require('assert');
 
 // Connection URL
-//var url = 'mongodb://localhost:27017/notes';
+var url = 'mongodb://localhost:27017/notes';
 
-// Use connect method to connect to the server
-MongoClient.connect("mongodb://localhost:27017/notes", { useNewUrlParser: true }, function(err, db) {
-  assert.equal(null, err);
-  console.log("Connected successfully to MongoDB server");
+// Connect to MongoDB
+MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
+  if (err) throw err;
+  //Create MongoDB collection - "ReduxNotepadDB"
+  var dbo = db.db("ReduxNotepadDB");
+  
 
- // db.close();
+  // Create MongoDB table - "notes" 
+  dbo.createCollection("notes", function(err, res) {
+    if (err) throw err;
+    if (res) {
+      console.log("MongoDB: Notes (table/collection) Created in ReduxNotepadDB (database)!");
+      // Insert seed data if MongoDB db creation successful
+      dbo.collection('notes').insertMany(
+      [
+        {"title": "A title", "note": "A long note."},
+        {"title": "A different title", "note": "A short note."}
+      ])
+    }
+  })
 });
+
+
 
 // Start the API server
 app.listen(PORT, function() {

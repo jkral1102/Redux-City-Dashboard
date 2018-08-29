@@ -24,7 +24,6 @@
     "express": "^4.15.4",
     "fetch": "^1.1.0",
     "flexbox-react": "^4.4.0",
-    "jquery": "^3.3.1",
     "moment": "^2.22.2",
     "mongodb": "^3.1.4",
     "mongoose": "^5.2.9",
@@ -34,6 +33,9 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "redux": "^4.0.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.14"
   }
 }

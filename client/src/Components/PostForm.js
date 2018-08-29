@@ -37,7 +37,7 @@ class PostForm extends Component {
         <form onSubmit={this.onSubmit}>
             <div>
                 <label>Title:</label><br/>
-                <input id='searchInput' type='text' name='title' onChange={this.onChange} value={this.state.title}/>
+                <input type='text' name='title' onChange={this.onChange} value={this.state.title}/>
             </div>
 
             

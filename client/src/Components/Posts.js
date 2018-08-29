@@ -19,6 +19,10 @@ class Posts extends Component {
     // 1) use console.log in actions/postAction.js to see if its getting called
     // 2) use console.log in reducer
     this.props.fetchPosts();
+    
+  }
+
+  searchArticles() {
     this.props.fetchArticles();
   }
 
@@ -34,12 +38,13 @@ class Posts extends Component {
 
 
   render() {
-    const articleItems = this.props.articles ? this.props.articles.map(article => (
+    //const newArticles = this.props.articles
+    const articleItems = this.props.newsArticles ? this.props.newsArticles.map(article => 
       <div key={article.id}>
-        <h2>{article.title}</h2>
-        <h3>{article.body}</h3>
+        <h2><a href={article.url}>{article.name}</a></h2>
+        <h3>{article.description}</h3>
       </div>
-    )) : null;
+    ) : null;
     // this.props.posts - determined MapStateToProps property
       const postItems = this.props.posts.map(post => (
           <div key={post.id}>
@@ -49,8 +54,21 @@ class Posts extends Component {
       ))
     return (
       <div>
+    
+
+
+      
+      <div>
+          <label>City:</label><br/>
+          <input id='searchInput' type='text'/>
+      </div>
+     
+      <div type='submit' onClick={() => this.searchArticles()}>Submit</div>
+
+      
         <h1>Articles</h1>
         {articleItems}
+        
         <h1> Posts </h1>
         {postItems}
 
@@ -71,7 +89,7 @@ const mapStateToProps = state => ({
   // posts.item - determined by postReducer: items: action.payload
   posts: state.posts.items,
   newPost: state.posts.item,
-  articles: state.posts.articles
+  newsArticles: state.posts.articles
 })
 export default connect(mapStateToProps, { fetchPosts, fetchArticles })(Posts);
 
