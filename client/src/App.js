@@ -4,7 +4,7 @@ import Navbar from './Components/Navbar'
 import API from './utils/API'
 import axios from 'axios'
 import Posts from './Components/Posts.js'
-import PostForm from './Components/PostForm.js'
+//import PostForm from './Components/PostForm.js'
 // Import provider so redux and react can interact
 import { Provider } from 'react-redux'
 import store from './store.js'
@@ -68,7 +68,7 @@ class App extends Component {
       <Provider store={store}>
         <div id="App">
           <Navbar />
-          <PostForm />
+         
           <Posts />
         </div>
       </Provider>

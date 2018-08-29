@@ -9,7 +9,8 @@ const Navbar = props => (
     <div id="navbar">
 
       {/* <img src={ Logo } alt='logo' /> */}
-      Redux Posts
+      <h1>City Dashboard</h1>
+      <h3>Stay in the loop on events near you!</h3>
   </div>
 );
 

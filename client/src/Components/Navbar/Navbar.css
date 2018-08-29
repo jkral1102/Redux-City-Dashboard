@@ -1,17 +1,13 @@
 #navbar {
+    padding-top: 3vh;
     width: 100vw;
-    height: 14vh;
-    background-color: #5380b599;
+    height: 20vh;
+    
+    background-color: #161e3a;
+    -ms-flex-align: center;
     align-items: center;
     border-bottom: solid 2px grey;
     font-size: 30px;
+    color: #949494;
+    text-align: center;
 }
-/* 
-#navbar img {
-    height: 8vh;
-    margin: auto;
-    display: block;
-    margin-top: 3vh;
-} */
-
-
