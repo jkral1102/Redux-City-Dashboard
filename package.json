@@ -10,12 +10,14 @@
     "build": "node scripts/build.js",
     "seed": "node scripts/seedDB.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "installDeps": "yarn && cd client && yarn"
+    "installDeps": "yarn && cd client && yarn",
+    "webpacker": "node --max_old_space_size=4096 node_modules/.bin/webpack-dev-server --progress --color --config config/webpack/development.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.6.1",
+    "json-loader": "^0.5.7",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
@@ -24,18 +26,21 @@
     "express": "^4.15.4",
     "fetch": "^1.1.0",
     "flexbox-react": "^4.4.0",
+    "fs": "0.0.1-security",
+    "mime": "^2.3.1",
     "moment": "^2.22.2",
     "mongodb": "^3.1.4",
     "mongoose": "^5.2.9",
     "path": "^0.12.7",
     "prop-types": "^15.6.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.14",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14"
+    "yql": "^1.0.2"
   }
 }
