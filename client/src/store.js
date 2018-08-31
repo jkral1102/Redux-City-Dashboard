@@ -2,7 +2,7 @@
 import {createStore, applyMiddleware, compose } from 'redux';
 // import thunk to give access to dispatch function for async calls
 import thunk from 'redux-thunk'
-import rootReducer from './reducers';
+import rootReducer from './Reducers';
 
 const initialState = {};
 const middleware = [thunk];

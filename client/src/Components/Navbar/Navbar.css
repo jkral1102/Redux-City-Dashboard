@@ -1,13 +1,18 @@
 #navbar {
     padding-top: 3vh;
-    width: 100vw;
-    height: 20vh;
-    
-    background-color: #161e3a;
+    min-width: 100vw;
+    min-height: 15vh;
+    background-color: #161e3acf;
     -ms-flex-align: center;
     align-items: center;
-    border-bottom: solid 2px grey;
     font-size: 30px;
-    color: #949494;
+    color: white;
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
 }
+
+#navbar h3{
+    font-size: 20px;
+}
+

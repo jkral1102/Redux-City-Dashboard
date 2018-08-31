@@ -1,11 +1,12 @@
 #App{
   background: black;
-  background-image: url('https://www.cityhealthdashboard.com/city-explorer-8638080452ce7a83d3a70c4433e00c8b.png');
+  background-image: url('http://www.berglarsengroup.com/uploads/agent-1/Skyline%20(1).jpg');
   min-width: 100vw;
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-size: 60% auto;
+  background-size: 100%;
   color: white;
   text-align: center;
 }

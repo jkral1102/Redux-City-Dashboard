@@ -10,7 +10,7 @@ const Navbar = props => (
 
       {/* <img src={ Logo } alt='logo' /> */}
       <h1>City Dashboard</h1>
-      <h3>Stay in the loop on events near you!</h3>
+      <h3>Stay in the loop!</h3>
   </div>
 );
 

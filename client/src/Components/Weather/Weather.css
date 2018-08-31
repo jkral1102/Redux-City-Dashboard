@@ -1,0 +1,25 @@
+#weather{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 30vw;
+    height: 30vh;
+    left: 10vh;
+    top: 5vh;
+    background-color: black;
+ 
+
+}
+
+#weather span {
+    flex: 1;
+}
+
+#weatherTitle{
+    font-size: 40px;
+    /* text-transform: capitalize; */
+}
+#weatherTitle span{
+    text-transform: capitalize;
+}

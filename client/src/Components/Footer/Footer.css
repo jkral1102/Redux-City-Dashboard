@@ -1,11 +1,14 @@
 #footer{
-    height: 6vh;
+    height: 4vh;
     bottom: 0;
+    margin: auto 0;
     position: absolute;
     width: 100vw;
-    background-color: rgb(78, 78, 78);
+    background-color: black;
     color: rgb(175, 174, 174);
     line-height: 6vh;
     vertical-align: middle;
+    font-size: 12px;
+    
 }
 
