@@ -1,18 +1,22 @@
 #navbar {
-    padding-top: 3vh;
-    min-width: 100vw;
+    /* padding-top: 3vh; */
+    width: 100vw;
     min-height: 15vh;
-    background-color: #161e3acf;
-    -ms-flex-align: center;
-    align-items: center;
+    background-color: #00000085;
+    /* -ms-flex-align: center;
+    align-items: center; */
     font-size: 30px;
     color: white;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
-#navbar h3{
-    font-size: 20px;
+#navTitle{
+    font-size: 50px;
+    /* margin-top: 50px; */
 }
 
+#navSubtitle{
+    font-size: 30px;
+}

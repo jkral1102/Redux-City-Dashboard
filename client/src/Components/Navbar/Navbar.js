@@ -9,8 +9,10 @@ const Navbar = props => (
     <div id="navbar">
 
       {/* <img src={ Logo } alt='logo' /> */}
-      <h1>City Dashboard</h1>
-      <h3>Stay in the loop!</h3>
+     
+      <div id='navTitle'>City Dashboard</div>
+      <div id='navSubtitle'>Stay in the loop!</div>
+  
   </div>
 );
 

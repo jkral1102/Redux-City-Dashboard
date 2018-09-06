@@ -1,7 +1,10 @@
 import {
     FETCH_ARTICLES,
-    FETCH_WEATHER
+    FETCH_WEATHER,
+    FETCH_EVENTS
 } from './types'
+
+import axios from 'axios'
 
 
 export const fetchArticles = (articles) => dispatch => {
@@ -36,4 +39,26 @@ export const fetchWeather = (weather) => dispatch => {
             city: document.getElementById("searchInput").value
         }))
         .then(data => console.log(data));
+    }
+
+
+export const fetchEvents = (events) => dispatch => {
+    console.log('action for axios req for events called');
+    axios.get('http://localhost:3000/api/events')
+
+        //.then(res => res.json())
+        // .then(function (res) {
+            
+        //     
+        // })
+
+        .then(data => dispatch({
+            type: FETCH_EVENTS,
+            payload: data
+        }))
+        .then(data => console.log(' actions received events data from server api call' + data))
+        .catch(function (error) {
+            console.log(error);
+        })
+       
     }

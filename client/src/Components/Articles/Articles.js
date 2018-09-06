@@ -8,12 +8,18 @@ class Articles extends Component {
     let articles = this.props.articles.map(article => 
       <div key={article.id}>
       {/* <img src={article.image.thumbnail} alt='articleImg'/> */}
-       <span><a href={article.url}>{article.name}</a></span>
-        <span>{article.description}</span>
+       <span id='articleTitle'><a href={article.url}>{article.name}</a></span>
+        <span id='articleBody'>{article.description}</span>
+        {article.image && <img alt='articleIcon' src={article.image.thumbnail.contentUrl}/>}
       </div>)
     return (
-      <div id='articles'>
+      <div id='articlesDiv'>
+        <div id='articlesTitle'>
+            <span>Local Headlines</span>
+        </div>
+        <div>
         {articles}
+        </div>
 
       </div>
 

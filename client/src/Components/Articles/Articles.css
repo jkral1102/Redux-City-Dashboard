@@ -1,49 +1,19 @@
-#articleDiv{
-    flex: 1;
-    color: rgb(18, 123, 150);
-    background-color: rgb(255, 255, 255);
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
+#articlesDiv{
+    /* flex: 2; */
+    background-color: #00000085;
     width: 50vw;
-    align-items: center;
-    border: solid 1px rgb(199, 198, 198);
-    padding: 10px;
-    max-height: 50vh;
-    overflow: auto;
+    margin-top: 100px;
 }
 
-#articleDiv header{
-    flex: 1;
-   
+#articlesTitle{
+    font-size: 28px;
 }
 
 
-
-
-.snippet:empty{
-    display: none;
+#articleTitle{
+    font-size: 15px;
 }
 
-.articleDiv button{
-  width: 100px;
-  margin: auto;
-  background-color: salmon;
+#articleBody{
+    font-size: 13px;
 }
-
-.title:hover{
-    color: blue;
-}
-.title:visited{
-    color: purple;
-}
-.title:active{
-    color: red;
-}
-
-#articles{
-    background-color: #161e3acf;
-}
-
-
-
