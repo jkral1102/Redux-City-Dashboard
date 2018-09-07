@@ -3,19 +3,55 @@ import './Weather.css'
 
 class Weather extends Component {
 
+  weatherIcon(weather){
+  switch(weather) {
+    case 'sunny':
+      return 'wi-day-sunny'
+      //break;
+    default:
+    return 'wi-day-rainy'
+    
+  }
+}
+
+// weather(type) {
+//   var type = {
+//     'sunny': function () {
+//       return 'wi-day-sunny';
+//     },
+//     'default': function () {
+//       return 'wi-day-rainy';
+//     }
+//   }
+// };
+
   render() {
+    const icons = {
+      'sunny': 'wi-day-sunny',
+      'rainy': 'wi-day-rainy',
+
+    
+    }
+    /* For use with weather icons library */
+    //let weatherIcon= 'custWI wi ' + icons['sunny'];
+ 
+    let weatherIcon = 'http://openweathermap.org/img/w/' + this.props.weather.weather[0].icon + '.png'
+    console.log(weatherIcon)
+
     return (
       <div id="weather">
 
-      <div id="weatherTitle">Current Weather for <span>{this.props.city}</span></div>
+      <div id="weatherTitle">Weather for <span>{this.props.city}</span></div>
       <div onClick={() => this.props.searchNew}>Change City</div>
-            <span>temp: {this.props.weather.main.temp} </span>
-            <span>min temp: {this.props.weather.main.min_temp} </span>
-            <span>max temp: {this.props.weather.main.max_temp} </span>
+            <span>Current {this.props.weather.main.temp} </span>
+            <span>Low {this.props.weather.main.temp_min} </span>
+            <span>High {this.props.weather.main.temp_max} </span>
             <span>humidity: {this.props.weather.main.humidity} </span>
-            <div class='custWI wi wi-rain'></div>
-            <span>main: {this.props.weather.weather[0].main} </span>
-            <span>description: {this.props.weather.weather[0].description} </span>
+            <div className={weatherIcon}></div>
+            <span>Currently:
+             <br/>{this.props.weather.weather[0].main} ({this.props.weather.weather[0].description})
+            </span>
+            <div><img alt='weather' src={weatherIcon}/></div>
       </div>
     )
   }

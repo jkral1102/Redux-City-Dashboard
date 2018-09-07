@@ -1,0 +1,26 @@
+#events{
+    flex: 1;
+    height: 50vh;
+    overflow: auto;
+    background-color: #00000085;
+    margin-top: 100px;
+    max-width: 35vw;
+}
+
+#eventsTitle{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.eventTitle{
+    font-size: 12px;
+}
+
+.eventInfo{
+    font-size: 9px;
+}
+
+.eventDate{
+    font-size: 9pm;
+    font-weight: bold;
+}

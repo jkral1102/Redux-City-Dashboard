@@ -25,7 +25,7 @@ export const fetchArticles = (articles) => dispatch => {
 
 export const fetchWeather = (weather) => dispatch => {
     console.log('fetch weather action called')
-    let searchTerm = document.getElementById("searchInput").value; // .toLowerCase() may not work 
+    let searchTerm = document.getElementById("searchInput").value;
     const apiKey = '7a8953553232f2c3d6b7d21ba4797b07';
 
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + searchTerm + ',us&APPID=' + apiKey)
@@ -43,20 +43,16 @@ export const fetchWeather = (weather) => dispatch => {
 
 
 export const fetchEvents = (events) => dispatch => {
-    console.log('action for axios req for events called');
-    axios.get('http://localhost:3000/api/events')
-
-        //.then(res => res.json())
-        // .then(function (res) {
-            
-        //     
-        // })
-
+    
+    console.log('action for events called');
+    let searchTerm = document.getElementById("searchInput").value;
+    axios.get('http://localhost:3000/api/events' + searchTerm)
         .then(data => dispatch({
             type: FETCH_EVENTS,
-            payload: data
+            payload: data.data.events.event
         }))
-        .then(data => console.log(' actions received events data from server api call' + data))
+        .then(payload => console.log(payload))
+      //  .then(res => console.log(res.data))
         .catch(function (error) {
             console.log(error);
         })

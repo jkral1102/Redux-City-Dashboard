@@ -1,7 +1,8 @@
 #articlesDiv{
     /* flex: 2; */
     background-color: #00000085;
-    width: 50vw;
+    /* width: 50vw; */
+    flex: 1;
     margin-top: 100px;
 }
 

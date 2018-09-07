@@ -9,6 +9,7 @@ import Navbar from '../Navbar'
 import './Main.css'
 import Articles from '../Articles'
 import Footer from '../Footer'
+import Events from '../Events'
 // eventful api key - h3LjwpmzbpDcs6wx.
 
 class Main extends Component {
@@ -31,25 +32,24 @@ class Main extends Component {
         <div id='main'>
 
           {/* WEATHER */}
-            {this.props.city ?
+          {this.props.city ?
             null
-              :
+            :
             /* Render search DIV if no city is selected */
-              <div id='searchDiv'>
-              <label>Let's Get Started</label> 
-              <input id='searchInput' type='text' placeholder='Enter City'/>
+            <div id='searchDiv'>
+              <label>Let's Get Started</label>
+              <input id='searchInput' type='text' placeholder='Enter City' />
               <div id='submitBtn' type='submit' onClick={() => this.fetchCityData()}>Submit</div>
-             </div>}
+            </div>}
 
-      
-        {this.props.weather && <Weather searchNew={() => this.searchNew} weather={this.props.weather} city={this.props.city}/>}
-        {this.props.articles && <Articles articles={this.props.articles} />}
-        {/* {this.props.events && this.props.events.map(item => {
-        <div events={this.props.events}>item</div>}) */}
-        {this.props.events && <h1>'Events loaded!'</h1>}
-          
-          </div>
-          <Footer />
+
+          {this.props.weather && <Weather searchNew={() => this.searchNew} weather={this.props.weather} city={this.props.city} />}
+          {this.props.articles && <Articles articles={this.props.articles} />}
+       
+          {this.props.events && <Events events={this.props.events}/>}
+
+        </div>
+        <Footer />
       </div>
     )
   }
