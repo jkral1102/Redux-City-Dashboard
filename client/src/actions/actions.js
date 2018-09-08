@@ -1,7 +1,8 @@
 import {
     FETCH_ARTICLES,
     FETCH_WEATHER,
-    FETCH_EVENTS
+    FETCH_EVENTS,
+    SEARCH_NEW
 } from './types'
 
 import axios from 'axios'
@@ -56,5 +57,11 @@ export const fetchEvents = (events) => dispatch => {
         .catch(function (error) {
             console.log(error);
         })
-       
     }
+
+export const searchNew = (dispatch) => {
+    console.log('searchNew action called');
+    dispatch({
+        type: SEARCH_NEW
+    })
+}

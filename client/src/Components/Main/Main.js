@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // To get posts from the store:
 // connects components to the redux store that was provided by the Provider
 import { connect } from 'react-redux';
-import { fetchArticles, fetchWeather, fetchEvents } from '../../Actions/actions';
+import { fetchArticles, fetchWeather, fetchEvents, searchNew } from '../../Actions/actions';
 import PropTypes from 'prop-types'
 import Weather from '../Weather'
 import Navbar from '../Navbar'
@@ -21,7 +21,7 @@ class Main extends Component {
   }
   // If change location button selected, clear city from state OR redisplay search div
   searchNew() {
-
+    this.props.searchNew();
   }
 
   render() {
@@ -59,7 +59,8 @@ class Main extends Component {
 Main.propTypes = {
   fetchArticles: PropTypes.func.isRequired,
   fetchWeather: PropTypes.func.isRequired,
-  fetchEvents: PropTypes.func.isRequired
+  fetchEvents: PropTypes.func.isRequired,
+  searchNew: PropTypes.func.isRequired
 }
 // bring in newly added items in the state to the component
 const mapStateToProps = state => ({
@@ -70,5 +71,5 @@ const mapStateToProps = state => ({
   city: state.cityData.city,
   events: state.cityData.events
 })
-export default connect(mapStateToProps, { fetchArticles, fetchWeather, fetchEvents })(Main);
+export default connect(mapStateToProps, { fetchArticles, fetchWeather, fetchEvents, searchNew })(Main);
 

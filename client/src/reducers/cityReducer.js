@@ -1,6 +1,6 @@
 // Its going to evaluate any actions committed such as fetching and creating posts
 // for actions we create types (constants) and import then into here
-import { FETCH_ARTICLES, FETCH_WEATHER, FETCH_EVENTS } from '../Actions/types'
+import { FETCH_ARTICLES, FETCH_WEATHER, FETCH_EVENTS, SEARCH_NEW } from '../Actions/types'
 
 const initialState = {
     // Items - represents the posts that come in from our actions which is where we put fetch request
@@ -31,6 +31,15 @@ export default function(state = initialState, action) {
             return{
                 ...state,
                 events: action.payload
+            }
+        case SEARCH_NEW:
+            console.log('search new reducer called')
+            return{
+                ...state,
+                city: '',
+                weather: '',
+                articles: '',
+                events: ''
             }
         default: 
             return state;

@@ -1,6 +1,6 @@
 {
-  "short_name": "Redux Notepad",
-  "name": "Redux Notepad",
+  "short_name": "Redux City Dashboard",
+  "name": "Redux City Dashboard",
 
   "start_url": "./index.html",
   "display": "standalone",

@@ -8,19 +8,18 @@
 }
 
 #eventsTitle{
-    font-weight: bold;
-    font-size: 17px;
+    font-size: 4em;
+    background-color: rgba(0, 0, 0, 0.349);
 }
 
 .eventTitle{
-    font-size: 12px;
+    font-size: 20px;
 }
 
 .eventInfo{
-    font-size: 9px;
+    font-size: 13px;
 }
 
 .eventDate{
-    font-size: 9pm;
-    font-weight: bold;
+    font-size: 10px;
 }
