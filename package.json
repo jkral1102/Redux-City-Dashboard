@@ -13,7 +13,7 @@
     "installDeps": "yarn && cd client && yarn",
     "webpacker": "node --max_old_space_size=4096 node_modules/.bin/webpack-dev-server --progress --color --config config/webpack/development.js"
   },
-  "author": "",
+  "author": "Jennifer Kral",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.6.1",
