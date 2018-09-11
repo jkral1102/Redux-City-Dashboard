@@ -6,7 +6,7 @@ class Footer extends Component {
     return (
       <div id='footer'>
         <span>  2018 Redux City Dashboard </span>
-      
+      <br/>
         <span>  Jennifer Kral&copy; </span>
       </div>
     )
