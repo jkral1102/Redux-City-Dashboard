@@ -1,17 +1,12 @@
 #weather{
-    /* flex: 1; */
     display: flex;
     flex-direction: column;
     color: white;
-    /* max-width: 30vw; */
     width: 18vw;
-    /* padding: 15px; */
-    /* height: 40vh; */
-    /* left: 10vh; */
    
     background-color: #00000085;
     font-size: 17px;
-    margin-top: 100px;
+    
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
     text-align: left;
 
@@ -19,7 +14,6 @@
 
 #weather span {
     flex: 1;
-    margin: 10px;
 }
 
 #titleDiv{
@@ -27,12 +21,12 @@
     flex-direction: row;
     background-color: rgba(0, 0, 0, 0.349);
     padding: 10px;
-    /* margin: auto; */
 }
 
 #currentTemp{
     text-shadow: 1px 1px 1px rgba(0,0,0,.54);
-    font-size: 9em;
+    font-size: 8em;
+    margin: -35px 0 -35px 0;
  
 }
 
@@ -46,7 +40,6 @@
     width: 130px;
     color: black;
     background-color: #2fa1ff;
-    /* margin: auto; */
     font-size: 10px;
     text-align: center;
     vertical-align: middle;
@@ -65,8 +58,6 @@
 }
 
 #countryName{
-    /* margin-top: 90px; */
-    line-height: 2.5;
     font-size: 1.8em;
 }
 
@@ -75,7 +66,7 @@
 
 }
 #highLowTemp {
-flex: 1;
+    flex: 1;
 }
 
 #highLowTemp span{

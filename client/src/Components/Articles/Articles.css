@@ -1,20 +1,35 @@
 #articlesDiv{
-    /* flex: 2; */
-    background-color: #00000085;
-    /* width: 50vw; */
     flex: 1;
-    margin-top: 100px;
+    height: 60vh;
+    overflow: auto;
+    background-color: black;
+    max-width: 35vw;
+}
+
+#article{
+    border-bottom: solid 1px white;
+    padding: 30px 50px 30px 50px;
+    text-align: left;
+    
 }
 
 #articlesTitle{
-    font-size: 28px;
+    font-size: 3.3em;
+    background-color: rgb(29, 92, 198);
 }
 
 
 #articleTitle{
-    font-size: 15px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+#articleTitle a{
+    margin-left: 20px;
 }
 
 #articleBody{
-    font-size: 13px;
+    font-size: 15px;
+    
+    margin: 30px 0 0 15px;
 }

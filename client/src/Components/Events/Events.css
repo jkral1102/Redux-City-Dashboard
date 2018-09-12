@@ -1,25 +1,38 @@
 #events{
     flex: 1;
-    height: 50vh;
+    height: 60vh;
     overflow: auto;
-    background-color: #00000085;
-    margin-top: 100px;
+    background-color: black;
     max-width: 35vw;
 }
 
 #eventsTitle{
-    font-size: 4em;
-    background-color: rgba(0, 0, 0, 0.349);
+    font-size: 3.3em;
+    background-color: rgb(29, 92, 198);
+}
+
+.event{
+    border-bottom: solid 1px white;
+    padding: 30px 50px 30px 50px;
+    text-align: left;
 }
 
 .eventTitle{
-    font-size: 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.eventTitle a{
+    margin-left: 20px;
 }
 
 .eventInfo{
-    font-size: 13px;
-}
+    font-size: 15px;
+} 
 
-.eventDate{
-    font-size: 10px;
+
+
+.event img{
+    height: 70px;
 }

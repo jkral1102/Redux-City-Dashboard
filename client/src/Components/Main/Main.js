@@ -14,7 +14,8 @@ import Events from '../Events'
 
 class Main extends Component {
 
-  fetchCityData() {
+  fetchCityData(e) {
+    e.preventDefault();
     this.props.fetchArticles();
     this.props.fetchWeather();
     this.props.fetchEvents();
@@ -37,15 +38,17 @@ class Main extends Component {
             :
             /* Render search DIV if no city is selected */
             <div id='searchDiv'>
-              <label>Let's Get Started</label>
-              <input id='searchInput' type='text' placeholder='Enter City' />
-              <div id='submitBtn' type='submit' onClick={() => this.fetchCityData()}>Submit</div>
+              <form onSubmit={e => this.fetchCityData(e)}>
+                <label>Let's Get Started</label>
+                <input id='searchInput' type='text' placeholder='Enter City' />
+                <br/>
+                <button id='submitBtn' type='submit'>Submit</button>
+              </form>
             </div>}
 
 
           {this.props.weather && <Weather searchNew={() => this.searchNew} weather={this.props.weather} city={this.props.city} />}
           {this.props.articles && <Articles articles={this.props.articles} />}
-       
           {this.props.events && <Events events={this.props.events}/>}
 
         </div>
