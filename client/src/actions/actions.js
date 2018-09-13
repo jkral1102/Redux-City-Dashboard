@@ -11,10 +11,8 @@ import axios from 'axios'
 export const fetchArticles = (articles) => dispatch => {
     let searchTerm = document.getElementById("searchInput").value;
     fetch('https://api.cognitive.microsoft.com/bing/v7.0/news/search?q=' + searchTerm + '&mkt=en-us', {
-    //    fetch('https://api.cognitive.microsoft.com/bing/v7.0/search?q=' + searchTerm + '&mkt=en-us', {
         headers: {
             'Ocp-Apim-Subscription-Key': '4f899609d6834a6aa0fffc1927a22ad5'
-            //'Host': 'api.cognitive.microsoft.com'
         },
     })
         .then(res => res.json())
