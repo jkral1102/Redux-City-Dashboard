@@ -46,7 +46,7 @@ export const fetchEvents = (events) => dispatch => {
     
     console.log('action for events called');
     let searchTerm = document.getElementById("searchInput").value;
-    axios.get('http://localhost:3000/api/events' + searchTerm)
+    axios.get('/api/events' + searchTerm)
         .then(data => dispatch({
             type: FETCH_EVENTS,
             payload: data.data.events.event
