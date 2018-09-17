@@ -12,7 +12,7 @@ const store = createStore(
     compose(
     applyMiddleware(...middleware), 
     // enable Redux devtools in browser by checking if we have the extension then enabling it. gives it access to the app's store.
-    // window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__()
+    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     )
 );
 
